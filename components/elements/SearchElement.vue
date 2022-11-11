@@ -19,6 +19,9 @@
   background-position: 100% 50%;
   background-repeat: no-repeat;
 }
+.form__search:focus {
+  outline: none;
+}
 .form__search::placeholder {
   color: #000;
 }
