@@ -93,4 +93,10 @@
   padding: 5px 15px;
   background-color: #fff;
 }
+
+@media (max-width: 780px) {
+  .ads__offer {
+    display: none;
+  }
+}
 </style>

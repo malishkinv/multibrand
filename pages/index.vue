@@ -2,6 +2,7 @@
   <div class="page__wrapper">
     <h1>Люксовые копии всемирных брендов</h1>
     <div class="h1__sub">Бесплатная доставка</div>
+    <SearchElement class="desktop-hide"></SearchElement>
     <MainMenu></MainMenu>
     <CategoriesBig></CategoriesBig>
     <AdsOffer></AdsOffer>
@@ -18,11 +19,13 @@ import AdsOffer from '@/components/ads/AdsOffer.vue'
 import SalesBig from '@/components/SalesBig.vue'
 import TrendsTopPopular from '@/components/TrendsTopPopular.vue'
 import AdTelegram from '@/components/ads/AdTelegram.vue'
+import SearchElement from "@/components/elements/SearchElement";
 
 export default {
   name: 'IndexPage',
   layout: 'defaultLayout',
   components: {
+    SearchElement,
     MainMenu,
     CategoriesBig,
     AdsOffer,
@@ -33,6 +36,9 @@ export default {
 }
 </script>
 <style>
+.desktop-hide {
+  display: none;
+}
 .page__wrapper {
   width: 1280px;
   margin: 0 auto;
@@ -53,5 +59,21 @@ h1 {
   color: #000000;
   text-align: center;
   margin-bottom: 40px;
+}
+
+@media (max-width: 780px) {
+  .desktop-hide {
+    display: block;
+  }
+  h1 {
+    font-size: 24px;
+    line-height: 29px;
+  }
+  .h1__sub {
+    margin-bottom: 30px;
+  }
+  .page__wrapper {
+    width: 100vw;
+  }
 }
 </style>

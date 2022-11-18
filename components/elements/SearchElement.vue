@@ -25,4 +25,11 @@
 .form__search::placeholder {
   color: #000;
 }
+
+@media (max-width: 780px) {
+  .form__search {
+    max-width: calc(100% - 36px);
+    margin-bottom: 30px;
+  }
+}
 </style>

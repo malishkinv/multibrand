@@ -3,8 +3,8 @@
     <div class="mainmenu__item">Одежда</div>
     <div class="mainmenu__item">Обувь</div>
     <div class="mainmenu__item">Аксессуары</div>
-    <div class="mainmenu__item">Бренды</div>
-    <div class="mainmenu__item">Sale%</div>
+    <div class="mainmenu__item mobile-hide">Бренды</div>
+    <div class="mainmenu__item mobile-hide">Sale%</div>
   </div>
 </template>
 <style>
@@ -26,5 +26,20 @@
 }
 .mainmenu__item:last-child {
   margin-right: 0;
+}
+@media (max-width: 780px) {
+  .mobile-hide {
+    display: none;
+  }
+  .mainmenu {
+    justify-content: space-between;
+    padding: 0 18px;
+  }
+  .mainmenu__item {
+    font-size: 16px;
+    margin-right: 0;
+    line-height: 20px;
+    text-transform: uppercase;
+  }
 }
 </style>

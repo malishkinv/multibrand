@@ -30,6 +30,20 @@
   position: relative;
   cursor: pointer;
 }
+.categories__big-item:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+}
+.categories__big-item:hover:after {
+  opacity: 1;
+  transition: opacity 0.2s;
+  background: rgba(0, 0, 0, 0.5);
+}
 .categories__big-item--women {
   background-image: url(/categories/categories__big-1.png);
 }
@@ -55,5 +69,24 @@
   color: #FFFFFF;
   padding: 12px 0;
   text-align: center;
+}
+
+@media (max-width: 780px) {
+  .categories__big {
+    height: 453px;
+    max-width: 100vw;
+    overflow: auto;
+    margin-bottom: 40px;
+  }
+  .categories__big .col {
+    min-width: 80%;
+    max-width: 80%;
+    padding: 0;
+    margin-right: 9px;
+  }
+
+  .categories__big .col:last-child {
+    margin-right: 0;
+  }
 }
 </style>

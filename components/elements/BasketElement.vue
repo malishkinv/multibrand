@@ -1,5 +1,5 @@
 <template>
-  <div class="basket">Корзина</div>
+  <div class="basket"><span class="mobile-hide">Корзина</span></div>
 </template>
 <style>
 .basket {
@@ -13,5 +13,13 @@
   width: fit-content;
   margin: 0 auto;
   cursor: pointer;
+}
+@media (max-width: 780px) {
+  .basket {
+    padding: 0;
+    background-image: url(/icons/icon__basket-mobile.svg);
+    width: 14px;
+    height: 20px;
+  }
 }
 </style>

@@ -77,6 +77,7 @@
   color: #C1C1C1;
   margin-right: 54px;
   cursor: pointer;
+  position: relative;
 }
 .tpp__menu-item--active {
   color: #000000;
@@ -88,6 +89,9 @@
   height: 270px;
   margin-bottom: 24px;
   cursor: pointer;
+}
+.tpp__item-image img {
+  width: 100%;
 }
 .tpp__item-info {
   cursor: pointer;
@@ -117,5 +121,60 @@
   font-size: 16px;
   line-height: 22px;
   color: #000000;
+}
+.tpp__item {
+  transition: all .2s;
+  padding: 10px;
+  margin: 0 auto;
+}
+.tpp__item-hover {
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transition: opacity .2s;
+}
+
+@media (min-width: 780px) {
+  .tpp__item:hover {
+    box-shadow: 0 7px 15px rgba(0, 0, 0, 0.2);
+  }
+}
+@media (max-width: 780px) {
+  .tpp {
+    max-width: 100vw;
+    margin-bottom: 14px;
+  }
+  .tpp .row {
+    margin: 0;
+  }
+  .tpp .col {
+    max-width: 50%;
+    min-width: 50%;
+    padding: 0;
+  }
+  .tpp__menu {
+    padding: 0 18px;
+    justify-content: space-between;
+    margin-bottom: 28px;
+  }
+  .tpp__menu-item {
+    margin-right: 0;
+  }
+  .tpp__item {
+    padding: 0;
+    margin-bottom: 26px;
+  }
+  .tpp .col .tpp__item {
+    padding: 0 2px 0 18px;
+  }
+  .tpp .col:nth-child(2n) .tpp__item {
+    padding: 0 18px 0 2px;
+  }
+  .tpp__item-image {
+    height: auto;
+  }
 }
 </style>

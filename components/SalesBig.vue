@@ -1,7 +1,7 @@
 <template>
-  <div class="sales__big row">
+  <div class="sales__big row mobile-column">
     <div class="col">
-      <div class="sales__big-item">
+      <div class="sales__big-item sales__big-item--left">
         <div class="sales__big-item-badge-new">NEW</div>
         <div class="sales__big-item-image">
           <img src="/sales/sales__big-1.png" />
@@ -14,7 +14,7 @@
       </div>
     </div>
     <div class="col">
-      <div class="sales__big-item">
+      <div class="sales__big-item sales__big-item--right">
         <div class="sales__big-item-badge-new">NEW</div>
         <div class="sales__big-item-image">
           <img src="/sales/sales__big-2.png" />
@@ -35,6 +35,16 @@
 .sales__big-item {
   position: relative;
   cursor: pointer;
+  width: fit-content;
+  margin: 0 auto;
+  padding: 10px;
+  transition: all .2s;
+}
+.sales__big-item--left {
+  margin-right: 25px;
+}
+.sales__big-item--right {
+  margin-left: 25px;
 }
 .sales__big-item-badge-new {
   position: absolute;
@@ -79,5 +89,39 @@
   font-size: 16px;
   line-height: 22px;
   color: #000000;
+}
+
+@media (min-width: 780px) {
+  .sales__big-item:hover {
+    box-shadow: 0 7px 15px rgba(0, 0, 0, 0.2);
+  }
+}
+@media (max-width: 780px) {
+  .mobile-column {
+    flex-direction: column;
+  }
+  .sales__big-item {
+    margin: 0 auto 24px !important;
+    padding: 0 18px;
+  }
+  .sales__big .col {
+    padding: 0;
+  }
+  .sales__big.row {
+    margin: 0;
+  }
+  .sales__big-item--left {
+    margin-right: 0;
+  }
+  .sales__big-item--right {
+    margin-left: 0;
+  }
+  .sales__big-item-image {
+    height: auto;
+    width: 100%;
+  }
+  .sales__big-item-image img {
+    width: 100%;
+  }
 }
 </style>

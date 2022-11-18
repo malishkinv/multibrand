@@ -22,4 +22,11 @@
   letter-spacing: 0.03em;
   color: #000000;
 }
+
+@media (max-width: 780px) {
+  .ads__telegram-text {
+    font-size: 18px;
+    line-height: 27px;
+  }
+}
 </style>

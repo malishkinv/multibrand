@@ -1,30 +1,31 @@
 <template>
   <footer class="footer">
     <div class="footer__wrapper">
-      <div class="row">
-      <div class="col-7 d-flex">
-        <div class="footer__menu">
-          <div class="footer__menu-item">О нас</div>
-          <div class="footer__menu-item">Оплата</div>
-          <div class="footer__menu-item">Доставка</div>
-          <div class="footer__menu-item">Как заказать</div>
-          <div class="footer__menu-item">Контакты</div>
-        </div>
-        <div class="footer__menu">
-          <div class="footer__menu-item">Одежда</div>
-          <div class="footer__menu-item">Обувь</div>
-          <div class="footer__menu-item">Аксессуары</div>
-          <div class="footer__menu-item">Бренды</div>
-          <div class="footer__menu-item">Sale%</div>
-        </div>
-        <div class="footer__menu">
-          <div class="footer__menu-item">Мои заказы</div>
-          <div class="footer__menu-item">Возврат</div>
-          <div class="footer__menu-item">Публичная оферта</div>
-          <div class="footer__menu-item">Часто задаваемые вопросы</div>
-        </div>
-      </div>
-      <div class="col-5 d-flex justify-content-end">
+      <div class="mobile-hide">
+        <div class="row">
+          <div class="col-7 d-flex">
+            <div class="footer__menu">
+              <div class="footer__menu-item">О нас</div>
+              <div class="footer__menu-item">Оплата</div>
+              <div class="footer__menu-item">Доставка</div>
+              <div class="footer__menu-item">Как заказать</div>
+              <div class="footer__menu-item">Контакты</div>
+            </div>
+            <div class="footer__menu">
+              <div class="footer__menu-item">Одежда</div>
+              <div class="footer__menu-item">Обувь</div>
+              <div class="footer__menu-item">Аксессуары</div>
+              <div class="footer__menu-item">Бренды</div>
+              <div class="footer__menu-item">Sale%</div>
+            </div>
+            <div class="footer__menu">
+              <div class="footer__menu-item">Мои заказы</div>
+              <div class="footer__menu-item">Возврат</div>
+              <div class="footer__menu-item">Публичная оферта</div>
+              <div class="footer__menu-item">Часто задаваемые вопросы</div>
+            </div>
+          </div>
+          <div class="col-5 d-flex justify-content-end">
         <div class="footer__contacts">
           <div class="footer__contacts-tel">+7 (495) 879-87-88</div>
           <div class="footer__contacts-socials d-flex justify-content-end">
@@ -36,16 +37,53 @@
           <div class="footer__contacts-contact-us">Связаться с нами</div>
         </div>
       </div>
-    </div>
+        </div>
+      </div>
+      <div class="desktop-hide">
+        <div class="row">
+          <div class="col d-flex">
+            <div class="footer__menu">
+              <div class="footer__menu-item">О нас</div>
+              <div class="footer__menu-item">Оплата</div>
+              <div class="footer__menu-item">Доставка</div>
+              <div class="footer__menu-item">Как заказать</div>
+              <div class="footer__menu-item">Контакты</div>
+              <div class="footer__menu-item">Одежда</div>
+              <div class="footer__menu-item">Обувь</div>
+            </div>
+            <div class="footer__menu">
+              <div class="footer__menu-item">Аксессуары</div>
+              <div class="footer__menu-item">Бренды</div>
+              <div class="footer__menu-item">Sale%</div>
+              <div class="footer__menu-item">Мои заказы</div>
+              <div class="footer__menu-item">Возврат</div>
+              <div class="footer__menu-item">Публичная оферта</div>
+              <div class="footer__menu-item">Часто задаваемые вопросы</div>
+            </div>
+          </div>
+          <div class="col d-flex justify-content-center">
+            <div class="footer__contacts">
+              <div class="footer__contacts-tel">+7 (495) 879-87-88</div>
+              <div class="footer__contacts-socials d-flex justify-content-end">
+                <div class="footer__contacts-social footer__contacts-social--tg"></div>
+                <div class="footer__contacts-social footer__contacts-social--vk"></div>
+                <div class="footer__contacts-social footer__contacts-social--fb"></div>
+                <div class="footer__contacts-social footer__contacts-social--ig"></div>
+              </div>
+              <div class="footer__contacts-contact-us">Связаться с нами</div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
     <div class="footer__copyright">
       <div class="footer__wrapper">
         <div class="row justify-content-between">
           <div class="col-8">
-            <a href="#">Политика конфиденциальности</a> &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp; <a href="#">Политика обработки персональных данных</a>
+            <a href="#">Политика конфиденциальности</a><br class="desktop-hide" /><span class="mobile-hide"> &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp; </span><a href="#">Политика обработки персональных данных</a>
           </div>
-          <div class="col-4 d-flex justify-content-end">
-            © Мультибрендовый
+          <div class="col-4 d-flex justify-content-end justify-content-center-mobile">
+            ©&nbsp;Мультибрендовый
           </div>
         </div>
       </div>
@@ -140,5 +178,45 @@
   color: #000000;
   border: 1px solid #000;
   cursor: pointer;
+}
+
+@media (max-width: 780px) {
+  .footer {
+    margin-top: 40px;
+  }
+  .footer__wrapper {
+    width: 100vw;
+    padding: 0 18px;
+  }
+  .footer .row {
+    flex-direction: column;
+    margin: 0;
+  }
+  .footer .col {
+    padding: 0;
+  }
+  .footer__menu-item {
+    margin-bottom: 16px;
+  }
+  .footer__contacts {
+    margin-top: 40px;
+  }
+  .footer__copyright {
+    margin-top: 52px;
+  }
+  .footer__copyright .footer__wrapper {
+    align-items: center;
+    text-align: center;
+  }
+  .footer__copyright .col-8 {
+    max-width: 100%;
+  }
+  .footer__copyright .col-4 {
+    max-width: 100%;
+    margin-top: 22px;
+  }
+  .justify-content-center-mobile {
+    justify-content: center !important;
+  }
 }
 </style>
