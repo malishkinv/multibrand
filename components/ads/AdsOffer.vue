@@ -4,7 +4,9 @@
       <div class="col h-100">
         <div class="ads__offer-left">
           <img src="/ads/ads__offer-left.png" />
-          <div class="ads__offer-left--price">128 000 ₽</div>
+          <div class="mobile-price-bottom">
+            <div class="ads__offer-left--price">128 000 ₽</div>
+          </div>
         </div>
       </div>
       <div class="col d-flex flex-column align-items-center justify-content-center h-100">
@@ -15,7 +17,9 @@
       <div class="col h-100">
         <div class="ads__offer-right">
           <img src="/ads/ads__offer-right.png" />
-          <div class="ads__offer-right--price">6 700 ₽</div>
+          <div class="mobile-price-bottom">
+            <div class="ads__offer-right--price">6 700 ₽</div>
+          </div>
         </div>
       </div>
     </div>
@@ -96,7 +100,71 @@
 
 @media (max-width: 780px) {
   .ads__offer {
-    display: none;
+    height: auto;
+    margin-bottom: 40px;
+    padding-top: 15px;
+    padding-bottom: 40px;
+  }
+  .ads__offer .row {
+    margin: 0;
+  }
+  .ads__offer .col {
+    padding: 0;
+  }
+  .ads__offer .col:nth-child(1) {
+    order: 1;
+    width: 50%;
+    min-width: 50%;
+    padding: 0 18px;
+  }
+  .ads__offer .col:nth-child(3) {
+    order: 2;
+    width: 50%;
+    min-width: 50%;
+    padding: 0 18px;
+  }
+  .ads__offer .col:nth-child(2) {
+    order: 3;
+    width: 100%;
+    min-width: 100%;
+    margin-top: 28px;
+  }
+  .ads__offer-title {
+    font-size: 24px;
+    line-height: 29px;
+    margin-bottom: 20px;
+  }
+  .ads__offer-text {
+    font-size: 16px;
+    line-height: 22px;
+    margin-bottom: 20px;
+  }
+  .ads__offer-left, .ads__offer-right {
+    height: 233px;
+    display: flex;
+    align-items: center;
+    border: 1px solid #fff;
+  }
+  .ads__offer-left img, .ads__offer-right img {
+    width: 100%;
+    display: block;
+    margin: auto;
+  }
+  .ads__offer-left--price, .ads__offer-right--price {
+    font-size: 16px;
+    line-height: 20px;
+    position: relative;
+    top: auto;
+    bottom: auto;
+    left: auto;
+    right: auto;
+  }
+  .mobile-price-bottom {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
   }
 }
 </style>
