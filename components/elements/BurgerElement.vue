@@ -1,6 +1,16 @@
 <template>
-  <div class="burger"></div>
+  <div class="burger" @click="mobileMenuOpen()"></div>
 </template>
+
+<script>
+export default {
+  methods: {
+    mobileMenuOpen() {
+      this.$emit('menu-open')
+    }
+  }
+}
+</script>
 <style>
 .burger {
   background-image: url(/icons/icon__burger.svg);

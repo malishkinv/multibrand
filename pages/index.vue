@@ -1,18 +1,24 @@
 <template>
-  <div class="page__wrapper">
-    <h1>Люксовые копии всемирных брендов</h1>
-    <div class="h1__sub">Бесплатная доставка</div>
-    <SearchElement class="desktop-hide"></SearchElement>
-    <MainMenu></MainMenu>
-    <CategoriesBig></CategoriesBig>
-    <AdsOffer></AdsOffer>
-    <SalesBig></SalesBig>
-    <TrendsTopPopular></TrendsTopPopular>
-    <AdTelegram></AdTelegram>
+  <div>
+    <PageHeader @menu-open="mobileMenuOpen()"></PageHeader>
+    <div class="page__wrapper">
+      <h1>Люксовые копии всемирных брендов</h1>
+      <div class="h1__sub">Бесплатная доставка</div>
+      <SearchElement class="desktop-hide"></SearchElement>
+      <MobileMenu v-if="mobileMenu" @menu-close="mobileMenuClose()"></MobileMenu>
+      <MainMenu></MainMenu>
+      <CategoriesBig></CategoriesBig>
+      <AdsOffer></AdsOffer>
+      <SalesBig></SalesBig>
+      <TrendsTopPopular></TrendsTopPopular>
+      <AdTelegram></AdTelegram>
+    </div>
   </div>
 </template>
 
 <script>
+import PageHeader from '@/components/page/PageHeader.vue'
+import MobileMenu from '@/components/page/MobileMenu.vue'
 import MainMenu from '@/components/page/MainMenu.vue'
 import CategoriesBig from '@/components/CategoriesBig.vue'
 import AdsOffer from '@/components/ads/AdsOffer.vue'
@@ -25,13 +31,28 @@ export default {
   name: 'IndexPage',
   layout: 'defaultLayout',
   components: {
+    PageHeader,
     SearchElement,
+    MobileMenu,
     MainMenu,
     CategoriesBig,
     AdsOffer,
     SalesBig,
     TrendsTopPopular,
     AdTelegram
+  },
+  data() {
+    return {
+      mobileMenu: false
+    }
+  },
+  methods: {
+    mobileMenuOpen() {
+      this.mobileMenu = true
+    },
+    mobileMenuClose() {
+      this.mobileMenu = false
+    }
   }
 }
 </script>

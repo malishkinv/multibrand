@@ -1,8 +1,16 @@
 <template>
-  <div class="city__select">
+  <div class="city__select" :class="{'city__select--mobile': mobile}">
     <span class="city__select-selected">Москва</span>
   </div>
 </template>
+
+<script>
+export default {
+  props: {
+    mobile: { type: Boolean, default: false }
+  }
+}
+</script>
 <style>
 .city__select {
   background-image: url(/icons/icon__location.svg);
@@ -13,6 +21,9 @@
   width: fit-content;
   padding-right: 18px;
   cursor: pointer;
+}
+.city__select--mobile {
+  background-image: url(/icons/icon__location-mobile.svg);
 }
 .city__select:after {
   content: '';
@@ -26,9 +37,15 @@
   background-repeat: no-repeat;
   background-size: 8px 4px;
 }
+.city__select--mobile:after {
+  background-image: url(/icons/icon__dropdown-mobile.svg);
+}
 .city__select-selected {
   font-size: 16px;
   color: #000;
   padding-left: 32px;
+}
+.city__select--mobile .city__select-selected {
+  color: #fff;
 }
 </style>

@@ -10,7 +10,10 @@
         </div>
         <div class="col">
           <div class="mobile-flex-between">
-            <BurgerElement class="desktop-hide"></BurgerElement>
+            <BurgerElement
+              class="desktop-hide"
+              @menu-open="mobileMenuOpen()"
+            ></BurgerElement>
             <div class="logo">
               <img src="/mb_logo.svg" />
             </div>
@@ -41,6 +44,11 @@ export default {
     BurgerElement,
     BasketElement,
     AuthElement
+  },
+  methods: {
+    mobileMenuOpen() {
+      this.$emit('menu-open')
+    }
   }
 }
 </script>
