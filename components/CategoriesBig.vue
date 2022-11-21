@@ -70,6 +70,14 @@
   padding: 12px 0;
   text-align: center;
 }
+@media (min-width: 780px) {
+  .categories__big .col:first-child {
+    padding-left: 0;
+  }
+  .categories__big .col:last-child {
+    padding-right: 0;
+  }
+}
 
 @media (max-width: 780px) {
   .categories__big {

@@ -79,7 +79,7 @@ h1 {
   line-height: 22px;
   color: #000000;
   text-align: center;
-  margin-bottom: 40px;
+  margin-bottom: 25px;
 }
 
 @media (max-width: 780px) {
